@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav">
+        <h1>Draw</h1>
+        <ul>
+            <li data-tab="draw">
+                <img src="assets/sketch.svg" alt="">
+                <span>Sketch</span>
+            </li>
+            <li data-tab="shapes">
+                <img src="assets/shapes.svg" alt="">
+                <span>Shapes</span>
+            </li>
+            <li data-tab="save">
+                <img src="assets/save.svg" alt="">
+                <span>Save</span>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <img src="assets/ham.svg" alt="">
+        </div>
+    </div>
+
+    <main>
+        <div class="sidemenu">
+            <div class="draw" data-tab="draw">
+                <div class="draw-options">
+                    <div class="options" data-option="pencil"><img src="assets/pencil.svg" alt=""></div>
+                    <div class="options" data-option="spray"><img src="assets/spray.svg" alt=""></div>
+                    <div class="options" data-option="eraser"><img src="assets/eraser.svg" alt=""></div>
+                </div>
+            </div>
+
+            <div class="shapes" data-tab="shapes">
+                <div class="shapeoptions">
+                    <div class="soptions" data-option="rect"><img src="assets/rect.svg" alt=""></div>
+                    <div class="soptions" data-option="circle"><img src="assets/circle.svg" alt=""></div>
+                    <div class="soptions" data-option="ellipse"><img src="assets/circle.svg" alt=""></div>
+                </div>
+            </div>
+
+            <div class="save" data-tab="save">
+                <div class="downoptions">
+                    <h2>Download as</h2>
+                    <button>PNG</button>
+                    <button>JPEG</button>
+                </div>
+
+                <div class="saveoptions">
+                    <h2><span>Save</span> <button class="add">+</button></h2>
+                    <div class="savedfiles">
+                    </div>
+                </div>
+            </div>
+
+            <div class="common" data-tab="common">
+                <div class="thickness">
+                    <span>Thickness</span>
+                    <div class="sizeinput">
+                        <input maxlength="2" type="text" type="text" value="5" disabled>
+                        <span>px</span>
+                    </div>
+                    <input type="range" min="1" max="100" value="5">
+                </div>
+    
+                <div class="opacity">
+                    <span>Opacity</span>
+                    <input type="range" min="0" max="255" value="255">
+                </div>
+                <div class="color">
+                    <span>Color</span>
+                    <input type="color" name="" id="">
+                </div>
+
+                <div class="clear">
+                    <button class="ur">Undo</button>
+                    <button class="ur">Redo</button>
+                    <button class="clr">Clear Canvas</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="drawMenu">
+            <canvas></canvas>
+        </div>
+        
+    </main>
+    <script src="main.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

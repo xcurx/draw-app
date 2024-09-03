@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --height: calc(100vh - 68px);
+}
+
+.nav{
+    display: flex;
+    background-color: #14213d;
+    padding-inline: 20px;
+    align-items: center;
+    color: aliceblue;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 0px;
+    background-color: #14213d;
+    color: aliceblue;
+}
+
+.liactive{
+    background-color: #fca311;
+}
+
+li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 2px 20px;
+    cursor: pointer;
+}
+
+li img{
+    width: 40px;
+}
+
+.hamburger{
+    width: clamp(20px,50%,50px);
+    display: none;
+}
+
+main{
+    width: 100vw;
+    height: var(--height);
+    background-color: grey;
+    position: relative;
+    overflow: hidden;
+}
+
+.sidemenu{
+    width: 250px;
+    height: calc(var(--height));
+    background-color: #e5e5e5;
+    position: absolute;
+    left: calc(100% - 250px);
+    top: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 2;
+}
+
+.draw,.shapes,.save{
+    width: 100%;
+    /* height: 100%; */
+}
+
+.draw-options{
+    width: 90%;
+    padding: 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.options{
+    /* background-color: #1D24CA; */
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    background-color: red;
+}
+
+.options img{
+    width: 90%;
+}
+
+.active{
+    background-color: #1D24CA;
+}
+
+.drawMenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: calc(100% - 250px);
+}
+
+.thickness{
+    width: 90%;
+    padding: 10px;
+    margin-top: 20px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.thickness > input{
+    width: 100%;
+}
+
+.thickness .sizeinput input{
+    width: 30px;
+    height: 100%;
+    border: none;
+    direction: rtl;
+    text-align: right;
+}
+.thickness .sizeinput input:focus{
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.sizeinput{
+    width: 50px;
+    font-size: 14px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 6px;
+}
+
+.color{
+    width: 90%;
+    padding: 10px;
+    margin-top: 20px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.opacity{
+    width: 90%;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.opacity input{
+    width: 100%;
+}
+
+.shapeoptions{
+    width: 90%;
+    padding: 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.soptions{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    /* background-color: red; */
+}
+
+.common{
+    width: 100%;
+    /* border: 2px solid black; */
+}
+
+.clear{
+    width: 90%;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.clear .clr{
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color:rgb(87, 87, 87);
+}
+
+.ur{
+    width: 50px;
+    height: 30px;
+    margin: 3px 2px;
+}
+
+.downoptions{
+    width: 90%;
+    padding: 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.downoptions h2{
+    margin-bottom: 10px;
+}
+
+.downoptions button{
+    width: 95%;
+    margin-bottom: 5px;
+}
+
+.saveoptions{
+    width: 90%;
+    padding: 10px;
+    margin-top: 30px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.saveoptions h2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.saveoptions button{
+    width: 30px;
+    height: 30px;
+}
+
+.savedfiles{
+    width: 100%;
+    /* height: 200px; */
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    /* background-color: red; */
+}
+
+.files{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #e5e5e5;
+    border: 1px solid rgb(58, 58, 58);
+}
+
+.files button{
+    width: 20px;
+    height: 20px;
+}
+
+canvas{
+    background-color: #ffffff;
+    width: 95%;
+    height: 90%;
+    box-shadow:  0px 10px 20px 5px rgb(71, 70, 70);
+}
+
+
+@media (max-width:1070px){
+    .sidemenu{
+        left: 100%;
+    }
+    .drawMenu{
+        width: 100%;
+    }
+    .hamburger{
+        display: block;
+    }
+}
+
